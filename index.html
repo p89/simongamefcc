@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=0.68">
+    <meta title="Simon Game">
+    <meta name="author" content="Designed and coded by the doer.">
+    <meta name="description" content="Simon Game designed and implemented during Free Code Camp course by the doer">
+    <meta name="keywords" content="simon game">
+    <title>Simon Game</title>
+    
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+    <audio id="sound0" src="sounds/bass.mp3" type="audio/mpeg"></audio>
+    <audio id="sound1" src="sounds/hi.mp3" type="audio/mpeg"></audio>
+    <audio id="sound2" src="sounds/snare.mp3" type="audio/mpeg"></audio>
+    <audio id="sound3" src="sounds/hat.mp3" type="audio/mpeg"></audio>
+    <audio id="sound4" src="sounds/strict.mp3" type="audio/mpeg"></audio>
+    <audio id="sound5" src="sounds/youwin.mp3" type="audio/mpeg"></audio>
+    <audio id="sound6" src="sounds/youlose.mp3" type="audio/mpeg"></audio>
+    
+  </head>
+  <body class="container-fluid text-center">
+    <div class="container">
+      <div id="infobox">Press Start Game
+      </div>
+    
+      <div class="col-md-6 col-md-offset-3 col-sm-4 col-md-offset-4">
+         
+        <table>
+          <tr>
+            <td id="controlField" colspan="2">
+            
+            <div class="buttons">
+                <a id="decCounter"> - </a> 
+                <a id="counter">1</a> 
+                <a id="incCounter"> + </a>
+                <a id="start">Start Game</a>
+                <a id="strict" class="">Strict Mode</a>
+                <a id="reset">Reset</a>
+            </div>
+
+            <div class="cloudInfo invisible">In Strict Mode if you get a button press wrong, game restarts at a new random series of button presses.
+            </div>
+     
+            </td>
+          </tr>
+          <tr>
+            <td><div id="field0" class="gameField unclickable"></div></td>
+            <td><div id="field1" class="gameField unclickable"></div></td>
+          </tr>
+          <tr>
+            <td><div id="field2" class="gameField unclickable"></div></td>
+            <td><div id="field3" class="gameField unclickable"></div></td>
+
+          </tr>
+        </table>
+
+      </div>
+  </div>    
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js.js"></script>
+  </body>
+</html>
