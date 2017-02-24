@@ -1,23 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Monoton');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
 body {
 	background-color: #2e0238;
 	color: #f8b195;
-	height: 100vh;
-	width: 100vw;
 }
 
-table {
-	width: 500px;
+.main {
+	width: 600px;
 	margin: 0px auto;
 	text-align: center;
-}
-
-.gameField {
-	border: 0px;
-	margin: 0px;
-	width: 250px;
-	height: 250px;
+  position: relative;
 }
 
 .startBtn {
@@ -42,32 +35,27 @@ table {
 
 .strictModeOn {
 	-webkit-box-shadow: 0 9px 16px 0 rgba(0, 0, 0, 0.1), 0 0 0 1px #170c22, 0 2px 1px 0 rgba(121, 65, 135, 0.5), inset 0 0 4px 3px rgba(15, 8, 22, 0.2) !important;
-    -moz-box-shadow: 0 9px 16px 0 rgba(0, 0, 0, 0.1), 0 0 0 1px #170c22, 0 2px 1px 0 rgba(121, 65, 135, 0.5), inset 0 0 4px 3px rgba(15, 8, 22, 0.2) !important;
-    box-shadow: 0 9px 16px 0 rgba(0, 0, 0, 0.1), 0 0 0 1px #170c22, 0 2px 1px 0 rgba(121, 65, 135, 0.5), inset 0 0 4px 3px rgba(15, 8, 22, 0.2) !important;
-    text-shadow: 0 0 21px rgba(223, 206, 228, 0.5), 0 0 10px rgba(223, 206, 228, 0.4), 0 0 2px #2a153c !important;
-    color: #e4e3ce !important;
+  -moz-box-shadow: 0 9px 16px 0 rgba(0, 0, 0, 0.1), 0 0 0 1px #170c22, 0 2px 1px 0 rgba(121, 65, 135, 0.5), inset 0 0 4px 3px rgba(15, 8, 22, 0.2) !important;
+  box-shadow: 0 9px 16px 0 rgba(0, 0, 0, 0.1), 0 0 0 1px #170c22, 0 2px 1px 0 rgba(121, 65, 135, 0.5), inset 0 0 4px 3px rgba(15, 8, 22, 0.2) !important;
+  text-shadow: 0 0 21px rgba(223, 206, 228, 0.5), 0 0 10px rgba(223, 206, 228, 0.4), 0 0 2px #2a153c !important;
+  color: #e4e3ce !important;
  }
 
-#controlField {
-	width: 100%;
-	height: 75px;
-	text-align: center;
-}
-
 .cloudInfo {
-	border: solid #d11b70 1px;
+	font-family: Roboto;
+  font-size: 14px;
+  border: solid #d11b70 1px;
 	position: absolute;
-    left: 440px;
+    left: 330px;
     top: 60px;
-    width: 220px;
-	height: 110px;
-    z-index: 1;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5);
-    font-size: 12px;
-    padding: 20px;
-    border-radius: 5px;
-    display: block;
+  width: 220px;
+	height: 68px;
+  z-index: 1;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 5px;
+  display: inline;
 }
 
 .invisible {
@@ -75,111 +63,93 @@ table {
 }
 
 #infobox {
-	width: 100%;
+	width: 550px;
 	text-align: center;
 	margin: 20px auto;
 	padding: 40px 20px 0 20px;
-	font-size: 5rem;
+	font-size: 3rem;
 	font-family: 'Monoton';
 	color: #fff;
 	text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff0080, 0 0 30px #ff0080, 0 0 40px #ff0080, 0 0 55px #ff0080, 0 0 75px #ff0080;
 }
 
+.gameField {
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+  width: 0px;
+  height: 0px;
+  cursor: pointer;
+  float: left;
+}
+
+#fields {
+  margin-left: 60px;
+}
+
 #field0 {
-	width: 0;
-	height: 0;
 	border-bottom: 250px solid #45ada8;
 	border-left: 250px solid transparent;
-
 }
 
 #field0:active {
 	background-color: #26022e;
-	width: 0;
-	height: 0;
 	border-bottom: 250px solid #65cdc8;
-	border-left: 250px solid transparent;
 }
 
 .field0a {
 	background-color: #26022e !important;
-	width: 0;
-	height: 0;
 	border-bottom: 250px solid #65cdc8;
-	border-left: 250px solid transparent;
 }
 
 #field1 {
-	width: 0;
-	height: 0;
 	border-bottom: 250px solid #e5fcc2;
 	border-right: 250px solid transparent;
 }
 
 #field1:active {
 	background-color: #26022e !important;
-	width: 0;
-	height: 0;
 	border-bottom: 250px solid #ffffe2;
-	border-right: 250px solid transparent;
 }
 
 .field1a {
-	/*background-color: #ffffe2 !important;*/
 	background-color: #26022e !important;
-	width: 0;
-	height: 0;
 	border-bottom: 250px solid #ffffe2 !important;
-	border-right: 250px solid transparent;
 }
 
 #field2 {
-	width: 0;
-	height: 0;
+  clear:both;
 	border-top: 250px solid #cc527a;
 	border-left: 250px solid transparent;
 }
 
 #field2:active {
 	background-color: #26022e !important;
-	height: 0;
 	border-top: 250px solid #ec729a;
-	border-left: 250px solid transparent;
 }
 
 .field2a {
 	background-color: #26022e !important;
-	height: 0;
 	border-top: 250px solid #ec729a !important;
-	border-left: 250px solid transparent;
 }
 
 #field3 {
-	width: 0;
-	height: 0;
 	border-top: 250px solid #143b6e;
 	border-right: 250px solid transparent;
 }
 
 #field3:active {
 	background-color: #26022e !important;
-	width: 0;
-	height: 0;
 	border-top: 250px solid #15487b !important;
-	border-right: 250px solid transparent;
 }
 
 .field3a {
 	background-color: #26022e !important;
-	width: 0;
-	height: 0;
 	border-top: 250px solid #15487b !important;
-	border-right: 250px solid transparent;
 }
 
 .clickable {
   pointer-events : auto;
-  cursor: pointer;
 }
 
 .unclickable {
@@ -191,28 +161,23 @@ table {
 .buttons {
   position: relative;
   white-space: nowrap;
-  min-height: 33px;
-  margin-bottom: 30px;
+  min-height: 25px;
+  margin-bottom: 70px;
   top: 10px;
-  margin-left: 46px }
+  margin-left: 104px; }
   .buttons a {
-    -webkit-animation: bounceInDown 900ms 200ms ease-in-out both;
-    -moz-animation: bounceInDown 900ms 200ms ease-in-out both;
-    -ms-animation: bounceInDown 900ms 200ms ease-in-out both;
-    -o-animation: bounceInDown 900ms 200ms ease-in-out both;
-    animation: bounceInDown 900ms 200ms ease-in-out both;
     width: 100px;
-    height: 33px;
+    font-family: Roboto;
+    font-size: 14px;
+    height: 25px;
     position: absolute;
-    top: 0;
-	text-decoration: none;
+	  text-decoration: none;
     padding-top: 9px;
     outline-width: 0px;
-    z-index: 990;
     color: #a675b3;
     text-align: center;
-    line-height: 15px;
-    display: block; }
+    line-height: 17px;
+    cursor: pointer;}
     .buttons a:not(.active) {
       -webkit-box-shadow: inset 0 1px 1px rgba(111, 55, 125, 0.8), inset 0 -1px 0px rgba(63, 59, 113, 0.2), 0 9px 16px 0 rgba(0, 0, 0, 0.3), 0 4px 3px 0 rgba(0, 0, 0, 0.3), 0 0 0 1px #150a1e;
       -moz-box-shadow: inset 0 1px 1px rgba(111, 55, 125, 0.8), inset 0 -1px 0px rgba(63, 59, 113, 0.2), 0 9px 16px 0 rgba(0, 0, 0, 0.3), 0 4px 3px 0 rgba(0, 0, 0, 0.3), 0 0 0 1px #150a1e;
@@ -223,20 +188,9 @@ table {
       background-image: -o-linear-gradient(#3b2751, #271739);
       background-image: linear-gradient(#3b2751, #271739);
       text-shadow: 0 0 21px rgba(223, 206, 228, 0.5), 0 -1px 0 #311d47; }
-      .buttons a:not(.active):hover, .buttons a:not(.active):focus {
-        -webkit-transition: color 200ms linear;
-        -moz-transition: color 200ms linear;
-        -o-transition: color 200ms linear;
-        transition: color 200ms linear;
-        -webkit-transition: text-shadow 500ms linear;
-        -moz-transition: text-shadow 500ms linear;
-        -o-transition: text-shadow 500ms linear;
-        transition: text-shadow 500ms linear;
-        color: #caadd2;
-        text-shadow: 0 0 21px rgba(223, 206, 228, 0.5), 0 0 10px rgba(223, 206, 228, 0.4), 0 0 2px #2a153c; }
-      .buttons a:not(.active):active {
+    .buttons a:not(.active):active {
         color: #e4e3ce !important; }
-    .buttons a.active, .buttons a:active {
+    .buttons a.active, .buttons a:active, a:not(.active):hover, .buttons a:not(.active):focus{
       -webkit-box-shadow: 0 9px 16px 0 rgba(0, 0, 0, 0.1), 0 0 0 1px #170c22, 0 2px 1px 0 rgba(121, 65, 135, 0.5), inset 0 0 4px 3px rgba(15, 8, 22, 0.2);
       -moz-box-shadow: 0 9px 16px 0 rgba(0, 0, 0, 0.1), 0 0 0 1px #170c22, 0 2px 1px 0 rgba(121, 65, 135, 0.5), inset 0 0 4px 3px rgba(15, 8, 22, 0.2);
       box-shadow: 0 9px 16px 0 rgba(0, 0, 0, 0.1), 0 0 0 1px #170c22, 0 2px 1px 0 rgba(121, 65, 135, 0.5), inset 0 0 4px 3px rgba(15, 8, 22, 0.2);
@@ -247,48 +201,13 @@ table {
       background-image: linear-gradient(#1f132e, #311d47);
       text-shadow: 0 0 21px rgba(223, 206, 228, 0.5), 0 0 10px rgba(223, 206, 228, 0.4), 0 0 2px #2a153c;
       color: #e4e3ce; }
-      .buttons a.active:before, .buttons a:active:before {
-        position: absolute;
-        display: block;
-        content: "";
-        width: 1px;
-        height: 36px;
-        top: 1px;
-        left: -2px;
-        background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(91, 35, 105, 0)), color-stop(41%, #5b2369), color-stop(59%, #5b2369), color-stop(100%, rgba(91, 35, 105, 0)));
-        background-image: -webkit-linear-gradient(rgba(91, 35, 105, 0), #5b2369 41%, #5b2369 59%, rgba(91, 35, 105, 0));
-        background-image: -moz-linear-gradient(rgba(91, 35, 105, 0), #5b2369 41%, #5b2369 59%, rgba(91, 35, 105, 0));
-        background-image: -o-linear-gradient(rgba(91, 35, 105, 0), #5b2369 41%, #5b2369 59%, rgba(91, 35, 105, 0));
-        background-image: linear-gradient(rgba(91, 35, 105, 0), #5b2369 41%, #5b2369 59%, rgba(91, 35, 105, 0));
-        -webkit-box-shadow: -2px 0 6px 0 #5b2369;
-        -moz-box-shadow: -2px 0 6px 0 #5b2369;
-        box-shadow: -2px 0 6px 0 #5b2369; }
-      .buttons a.active:after, .buttons a:active:after {
-        position: absolute;
-        display: block;
-        content: "";
-        width: 1px;
-        height: 36px;
-        top: 1px;
-        right: -2px;
-        background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(91, 35, 105, 0)), color-stop(41%, #5b2369), color-stop(59%, #5b2369), color-stop(100%, rgba(91, 35, 105, 0)));
-        background-image: -webkit-linear-gradient(rgba(91, 35, 105, 0), #5b2369 41%, #5b2369 59%, rgba(91, 35, 105, 0));
-        background-image: -moz-linear-gradient(rgba(91, 35, 105, 0), #5b2369 41%, #5b2369 59%, rgba(91, 35, 105, 0));
-        background-image: -o-linear-gradient(rgba(91, 35, 105, 0), #5b2369 41%, #5b2369 59%, rgba(91, 35, 105, 0));
-        background-image: linear-gradient(rgba(91, 35, 105, 0), #5b2369 41%, #5b2369 59%, rgba(91, 35, 105, 0));
-        -webkit-box-shadow: 2px 0 6px 0 #5b2369;
-        -moz-box-shadow: 2px 0 6px 0 #5b2369;
-        box-shadow: 2px 0 6px 0 #5b2369; }
-    .buttons a.active {
-      z-index: 1000; }
-    .buttons a:active {
-      z-index: 999; }
     .buttons a:last-of-type {
       -webkit-border-radius: 0 7px 7px 0;
       -moz-border-radius: 0 7px 7px 0;
       -ms-border-radius: 0 7px 7px 0;
       -o-border-radius: 0 7px 7px 0;
-      border-radius: 0 7px 7px 0; }
+      border-radius: 0 7px 7px 0;
+      width: 80px; }
     .buttons a:first-of-type {
       -webkit-border-radius: 7px 0 0 7px;
       -moz-border-radius: 7px 0 0 7px;
