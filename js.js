@@ -4,11 +4,13 @@
 	const movesRange = 20;
 	const generateArray = function(movesRange) {  //func generates random array for the game move sequence
 
-	return Array(movesRange)
-		   .fill()
-		   .map(() => Math.floor(Math.random()*4));
-	
-};  const gameSettings = {
+		return Array(movesRange)
+			   .fill()
+			   .map(() => Math.floor(Math.random()*4));
+		
+	};  
+
+	const gameSettings = {
 
 	gameSounds: [...Array(7).keys()].map((i) => $(`#sound${i}`)),
 	userMessages: { ongoing: 'Good luck!', defeat: "You lose!", victory: "Victory!", wrongField: "Wrong field!", correct: "Correct!" },
@@ -55,7 +57,7 @@
 		gameSettings.value = 1;
 		gameController.counter.html(gameSettings.value);
 		gameSettings.movesCounter = 0;
-		gameSettings.movesOrder = generateArray();
+		gameSettings.movesOrder = generateArray(movesRange);
 		gameController.runGame();
 	},
 
